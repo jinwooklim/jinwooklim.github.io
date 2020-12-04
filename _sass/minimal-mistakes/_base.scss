@@ -126,6 +126,8 @@ blockquote {
 /* links */
 
 a {
+  /* Remove Hyperlink underbar */
+  text-decoration: none;
   &:focus {
     @extend %tab-focus;
   }
