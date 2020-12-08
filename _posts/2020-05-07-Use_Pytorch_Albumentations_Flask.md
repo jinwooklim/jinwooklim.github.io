@@ -15,7 +15,7 @@ comments : true
 
 ## 1. Intro
 ---
-이번 포스트에서는 구글링을 통해서 쉽게 알수 있는 3가지 예제들을 섞어서 하나의 예제로 진행해보려 한다. 
+이번 포스트에서는 구글링을 통해서 쉽게 알수 있는 3가지 예제들을 섞어서 하나의 예제로 진행해보려고 합니다. 
 
 * Pytorch 모델을 학습하여 저장하고 불러와서 사용하는 것
 * albumentations을 사용하는 것
@@ -84,14 +84,14 @@ comments : true
 ## 3. Use albumentations
 ---
 
-도대체 뜬금없게, PyTorch와 Flask를 사용하는 예제에서 **albumentations** 라는 것을 소개하는지 의문이들 수 있다. (~~두서없이 글을 쓰는 나 때문이다~~)
+도대체 뜬금없게, PyTorch와 Flask를 사용하는 예제에서 **albumentations** 라는 것을 소개하는지 의문이들 수 있습니다.
 
-[albumentations](https://github.com/albumentations-team/albumentations) 은 Torchvision, imagaug, keras, augmentor 등 Image augmentation package들과 같은 augmentation을 제공하는 package이다. 하지만 이들 보다 훨씬 빠르다 ! [링크 논문의 Table 1 참조](https://arxiv.org/pdf/1809.06839.pdf)
+[albumentations](https://github.com/albumentations-team/albumentations) 은 Torchvision, imagaug, keras, augmentor 등 Image augmentation package들과 같은 augmentation을 제공하는 package 입니다. 게다가 훨씬 빠른 것을 알 수 있습니다 ! [링크 논문의 Table 1 참조](https://arxiv.org/pdf/1809.06839.pdf)
 
-간략하게 말하자면, albumentations는 torchvision에서 사용되는 transformer 코드 사용 형태를 그대로 유지하면서, 같은 결과물을 만드는 속도가 훨씬 빠르다.
+간략하게 말하자면, albumentations는 torchvision에서 사용되는 transformer 코드 사용 형태를 그대로 유지하면서, 같은 결과물을 만드는 속도가 훨씬 빠르다는 것입니다.
 
-따라서, 대부분의 vision task deep learning model의 input으로 들어가는 image들이 augmentation (preprocess)를 거쳐야 하는 상황이기에, model의 train과정에서 augmentation or preprocess speed를 x3 가까이 향상 시킬 수 있다. 그리고 inference의 경우에는 normalization, resize 같은 preprocess에서 처리 속도를 향상 시킬 수 있다.
-**즉, Server-Client 구조에서 client가 보낸 image에 대하여 server가 preprocess를 하고, model에 input으로 넣는 과정을 빠르게 진행할 수 있게 된다.** (그렇다고 너무 맹신하지 말고, 효율적인 코드를 생각하자 !)
+따라서, 대부분의 vision task deep learning model의 input으로 들어가는 image들이 augmentation (preprocess)를 거쳐야 하는 상황이기에, model의 train과정에서 augmentation or preprocess speed를 x3 가까이 향상 시킬 수 있습니다. 그리고 inference의 경우에는 normalization, resize 같은 preprocess에서 처리 속도를 향상 시킬 수 있습니다.
+**즉, Server-Client 구조에서 client가 보낸 image에 대하여 server가 preprocess를 하고, model에 input으로 넣는 과정을 빠르게 진행할 수 있게 됩니다.** (그렇다고 너무 맹신하지 말고, 효율적인 코드를 생각하는 것이 좋을 것 같습니다.)
 
 
 

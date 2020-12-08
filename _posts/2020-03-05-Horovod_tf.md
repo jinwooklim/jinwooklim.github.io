@@ -14,10 +14,10 @@ comments : true
 
 ## 1. Intro
 ---
-Distributed deep learning에 사용되는 ["Horovod"](https://github.com/horovod/horovod)에 대해 소개하고, 설치, 사용법을 공유하려함.  
-Horovod는 아직 잘 지원되지 않는 Distributed computation을 간단한 코드 변경으로 잘 지원해주고 있다.
-위 링크를 따라가서, 성능 향상을 보면 일반적으로 좋은편이다.   
-설치는 OpenMPI - (TF,Horovod 사전준비) - NCCL설치 - Horovod설치 순으로 진행하기 바람.  
+Distributed deep learning에 사용되는 ["Horovod"](https://github.com/horovod/horovod)에 대해 소개하고, 설치, 사용법을 공유하려고 합니다.  
+Horovod는 아직 잘 지원되지 않는 Distributed computation을 간단한 코드 변경으로 잘 지원해주고 있습니다.
+위 링크를 따라가서, 성능 향상을 보면 일반적으로 좋은편인 것을 알 수 있습니다.   
+설치는 OpenMPI - (TF,Horovod 사전준비) - NCCL설치 - Horovod설치 순으로 진행하기 바랍니다.  
 
 &nbsp;
 ## 2. OpenMPI설치

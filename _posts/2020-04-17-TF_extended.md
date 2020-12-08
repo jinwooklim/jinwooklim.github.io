@@ -13,17 +13,17 @@ comments : true
 
 ## 1. Intro
 ---
-까마득한 지난 글에서 **Tensorflow Extended** (이하 **TFX**)에 대해서 언급하였다.  
+까마득한 지난 글에서 **Tensorflow Extended** (이하 **TFX**)에 대해서 언급했습니다.  
 아직 많은 리뷰가 없어서 Youtube의 TFX 관련 내용, [TFX Homepage](https://www.tensorflow.org/tfx) , 
-[TFX Github Link](https://github.com/tensorflow/tfx) 를 기반으로 보고 기본 예제들과 회사에서 진행하는 과제로 얻은 것들을 정리하였다.  
+[TFX Github Link](https://github.com/tensorflow/tfx) 를 기반으로 보고 기본 예제들과 회사에서 진행하는 과제로 얻은 것들을 정리해 보았습니다.  
 
-TFX에대한 내용을 시작하기 앞서, ML production에 대한 말을 적으려한다.  
-Machine Learning의 최신의 논문들로 부터 나오는 코드들은, 다양한 분야에 사용하기 위해서는 많은 작업들이 필요하다. 특히 기업의 Production 수준으로오면 더 그렇다.
-따라서, Google에서는 발생할 문제들을 Modern Software 관점으로 해결할 생각을 하고 있었고, 이를 **NIPS 2015 : "Hidden Technical Debt in Machine Learning Systems"** 논문을 통해 알수 있다.
+TFX에대한 내용을 시작하기 앞서, ML production에 대한 말을 적어보려고 합니다.  
+Machine Learning의 최신의 논문들로 부터 나오는 코드들은, 다양한 분야에 사용하기 위해서는 많은 작업들이 필요합니다. 특히 기업의 Production 수준으로오면 더 그렇합니다.
+따라서, Google에서는 이론을 Production으로 가져오면서, 발생할 문제들을 Modern Software 관점으로 해결할 생각을 하고 있었고, 이를 **NIPS 2015 : "Hidden Technical Debt in Machine Learning Systems"** 논문을 통해 알 수 있습니다.
 
-즉, Google은 이미 ML ecosystem에 대한 생각을 하고 있었고, Tensorflow와 같은 ML 관련 Software를 공개하며 준비를 진행해왔다. 
-그리고 2019년 ML ecosystem에서 ML pipeline을 담당할 TFX를 오픈소스로 공개하면서, Google에서 생각하고 준비했던 **Modern Software Development** 기술과 **Machine Learning Development**의 결합을 보여주게 되었다.
-즉, ML pipeline 이며 TFX의 목적은 아래 Machine Learning Development의 7가지 요소들과 Modern Software Development의 9가지 요소를 결합하는 것으로 볼수 있다.
+즉, Google 내부에서는 이미 ML ecosystem에 대한 생각을 하고 있었고, Tensorflow와 같은 ML 관련 Software를 공개하며 준비를 진행해왔음을 알수 있는 것입니다. 
+그리고 2019년 ML ecosystem에서 ML pipeline을 담당할 TFX를 오픈소스로 공개하면서, Google이 생각하고 준비했던 **Modern Software Development** 기술과 **Machine Learning Development**의 결합을 보여주게 되었습니다.
+즉, ML pipeline 이며 TFX의 목적은 아래 Machine Learning Development의 7가지 요소들과 Modern Software Development의 9가지 요소를 결합하는 것으로 볼수 있습니다.
 
 ### 1.1. Machine Learning Development
 ---
