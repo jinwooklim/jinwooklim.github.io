@@ -40,7 +40,7 @@ Tensorflow Lite에서는 Edge device에서의 동작을 위한 모델 경량화 
 
 아래는 Model의 최적화 (Quantization 과정)을 위한 Flowchart 입니다.
 
-![optimization](/assets/images/posts/2020-08-10-Tensorflow-Lite-2/optimization.jpg){: .align-center}
+![optimization](/assets/images/posts/2020-08-10-Tensorflow_Lite_2/optimization.jpg){: .align-center}
 
 흔히, GPU를 이용하여 Model을 가속할 경우에는 float16 quantization을 많이 사용합니다 (GPU가 floating point를 사용하기 때문). 이는 Tensorflow로 부터  생성된 모델의 parameter 값은 float16으로 바꾸고, Model은 그대로 float32를 사용하는 것입니다.
 
@@ -52,7 +52,7 @@ Tensorflow Lite에서는 Edge device에서의 동작을 위한 모델 경량화 
 
 이로 인해서 성능에는 손해를 보겠지만, Model이 작아지고 추론 속도가 증가하게 됩니다 (Edge TPU는 Interger를 사용하기 때문).  이 외에도 **Dynamic range quantization** 같은 다른 방법들이 있지만, HW에 의한 제한 같은 이유로 사용이 더 어렵습니다.
 
-![quant_image](/assets/images/posts/2020-08-10-Tensorflow-Lite-2/quant_image.png){: .align-center}
+![quant_image](/assets/images/posts/2020-08-10-Tensorflow_Lite_2/quant_image.png){: .align-center}
 
 float32 values &rarr; int8 values
 
@@ -62,7 +62,7 @@ float32 values &rarr; int8 values
 
 **QAT**를 수행할 때 실제로는 tranining graph 자체는 floating-point (ex: float32)에서 동작하지만, fixed-point의 결과를 내보내야 하기 때문에, 특수한 operation ( [tensorflow::ops::FakeQuantWithMinMaxVars](https://www.tensorflow.org/api_docs/cc/class/tensorflow/ops/fake-quant-with-min-max-vars))을 사용합니다. 이로 인해서, Quantization로 인한 손실이 학습에 포함되게 되는 것입니다.
 
-![quant_train](/assets/images/posts/2020-08-10-Tensorflow-Lite-2/quant_train.png){: width="328" height="240"}{: .align-center}
+![quant_train](/assets/images/posts/2020-08-10-Tensorflow_Lite_2/quant_train.png){: width="328" height="240"}{: .align-center}
 
 &nbsp;
 
